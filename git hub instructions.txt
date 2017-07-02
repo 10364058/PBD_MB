@@ -1,0 +1,20 @@
+in p drive:
+
+git clone PASTE The URL from repository
+
+
+Download git command line client
+https://git-scm.com/download/win
+
+Install git command line client
+
+Create a new repository on github.com
+Clone github repository with the git clone command
+git clone <url to repository>
+Cd <repo name>
+git status <- show file modification from server
+git pull <- sync and pull changes from server
+Make changes then 
+git add <filename> <- to schedule change for commit
+git commit –m “message”
+git push

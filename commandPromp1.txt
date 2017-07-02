@@ -1,0 +1,320 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\10363300>git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\10363300>p:
+
+P:\>git clone https://github.com/dasilva1996/PBD_Idi.git
+Cloning into 'PBD_Idi'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+P:\>cd PBD_dir
+The system cannot find the path specified.
+
+P:\>cd PBD_MB
+The system cannot find the path specified.
+
+P:\>cd PBD_Idi
+
+P:\PBD_Idi>dir
+ Volume in drive P is Data
+ Volume Serial Number is E4BD-14DB
+
+ Directory of P:\PBD_Idi
+
+22/06/2017  10:36    <DIR>          .
+22/06/2017  10:36    <DIR>          ..
+22/06/2017  10:36                31 README.md
+               1 File(s)             31 bytes
+               2 Dir(s)     173,756,416 bytes free
+
+P:\PBD_Idi>more READ.md
+Cannot access file P:\PBD_Idi\READ.md
+
+P:\PBD_Idi>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+P:\PBD_Idi>git pull
+Already up-to-date.
+
+P:\PBD_Idi>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+P:\PBD_Idi>git diff
+diff --git a/README.md b/README.md
+index 1ad0394..dc6091b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,4 @@
+ # PBD_Idi
+-The place where my
++The place where my code is at
++
++This is where I will check in my code for CA3, CA4 and CA5
+\ No newline at end of file
+
+P:\PBD_Idi>git add README.md
+
+P:\PBD_Idi>git add README.md
+
+P:\PBD_Idi>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+
+P:\PBD_Idi>git commit-m "" add Ca4,ca5, ca6 details" README.md
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+P:\PBD_Idi>git commit -m "add Ca4,ca5, ca6 details" README.md
+[master c61c95d] add Ca4,ca5, ca6 details
+ Committer: Idi Amin Da Silva <10363300@mydbs.ie>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+P:\PBD_Idi>git config --global --edit
+
+P:\PBD_Idi>git commit --amend --reset-author
+[master 21ddbdc] add Ca4,ca5, ca6 details
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+P:\PBD_Idi>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+Password for 'https://github.com': ^C
+P:\PBD_Idi>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to dasilva1996/PBD_Idi.git denied.
+fatal: Authentication failed for 'https://github.com/dasilva1996/PBD_Idi.git/'
+
+P:\PBD_Idi>
+P:\PBD_Idi>git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 340 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dasilva1996/PBD_Idi.git
+   323a2c2..21ddbdc  master -> master
+
+P:\PBD_Idi>git add README.md
+
+P:\PBD_Idi>git commit -m "test" README.md
+[master 1953b54] test
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+P:\PBD_Idi>git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dasilva1996/PBD_Idi.git
+   21ddbdc..1953b54  master -> master
+
+P:\PBD_Idi>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        attempts.csv
+        attempts.py
+        command prompt.txt
+        error_course_results.log
+        gitadd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+P:\PBD_Idi>git add *.*
+warning: LF will be replaced by CRLF in error_course_results.log.
+The file will have its original line endings in your working directory.
+
+P:\PBD_Idi>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   attempts.csv
+        new file:   attempts.py
+        new file:   command prompt.txt
+        new file:   error_course_results.log
+        new file:   gitadd.txt
+
+
+P:\PBD_Idi>git push
+Everything up-to-date
+
+P:\PBD_Idi>git commit -m "add the attempt parsing" *.*
+warning: LF will be replaced by CRLF in error_course_results.log.
+The file will have its original line endings in your working directory.
+[master f183609] add the attempt parsing
+ 5 files changed, 455 insertions(+)
+ create mode 100644 attempts.csv
+ create mode 100644 attempts.py
+ create mode 100644 command prompt.txt
+ create mode 100644 error_course_results.log
+ create mode 100644 gitadd.txt
+
+P:\PBD_Idi>git push
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 7.86 KiB | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/dasilva1996/PBD_Idi.git
+   1953b54..f183609  master -> master
+
+P:\PBD_Idi>
+
+=======================================================================
+Myself's
+
+========================================================================
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\10364058>P:
+
+P:\>cd PBD_MB
+
+P:\PBD_MB>dir
+ Volume in drive P is Data
+ Volume Serial Number is E4BD-14DB
+
+ Directory of P:\PBD_MB
+
+22/06/2017  10:36    <DIR>          .
+22/06/2017  10:36    <DIR>          ..
+22/06/2017  11:43               123 README.md
+               1 File(s)            123 bytes
+               2 Dir(s)     109,318,144 bytes free
+
+P:\PBD_MB>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+P:\PBD_MB>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        attempts.csv
+        attempts.py
+        attempts.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+P:\PBD_MB>git add *.*
+warning: LF will be replaced by CRLF in attempts.txt.
+The file will have its original line endings in your working directory.
+
+P:\PBD_MB>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   attempts.csv
+        new file:   attempts.py
+        new file:   attempts.txt
+
+
+P:\PBD_MB>git commit -m "add the attempts parsing" *.*
+warning: LF will be replaced by CRLF in attempts.txt.
+The file will have its original line endings in your working directory.
+[master 5f1a3e0] add the attempts parsing
+ 3 files changed, 238 insertions(+)
+ create mode 100644 attempts.csv
+ create mode 100644 attempts.py
+ create mode 100644 attempts.txt
+
+P:\PBD_MB>git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 5.35 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/10364058/PBD_MB.git
+   ba906f3..5f1a3e0  master -> master
+
+P:\PBD_MB>
